@@ -2,12 +2,11 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY backend/ ./backend/
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
- 
-COPY . .
+WORKDIR /app/backend
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 7860
 
