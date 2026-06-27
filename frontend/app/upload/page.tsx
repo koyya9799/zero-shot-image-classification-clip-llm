@@ -174,11 +174,17 @@ export default function UploadPage() {
 
       if (isCancelled) return
 
-      const normalizedResult = {
+            const normalizedResult = {
         ...result,
-        label: result.prediction || result.label || 'Unknown',
+        label: result.prediction || result.label || "Unknown",
         confidence: result.confidence ?? result.confidence_score ?? 0,
-        candidates: result.top_matches?.map((m: any) => ({ label: m.label, score: m.score })) || result.candidates || []
+        candidates:
+          result.top_matches?.map(
+            (m: { label: string; score: number }) => ({
+              label: m.label,
+              score: m.score,
+            })
+          ) || result.candidates || [],
       }
 
       updateStepStatus('analyze-image', 'completed')
