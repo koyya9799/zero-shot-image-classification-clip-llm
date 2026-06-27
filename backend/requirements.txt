@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pillow
+torch
+torchvision
+open_clip_torch
+medclip
+numpy
+transformers
+sentencepiece
+python-dotenv
+google-generativeai
+openai
+psutil

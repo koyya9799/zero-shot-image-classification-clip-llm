@@ -1,0 +1,45 @@
+{
+  "by_domain": {
+    "animal": {
+      "flamingo": {
+        "support": 6,
+        "captions": [
+          "a pink flaming standing in a body of water",
+          "a pink flaming standing in a body of water",
+          "a pink flaming standing in a body of water",
+          "a pink flaming standing in a body of water",
+          "a pink flaming standing in a body of water",
+          "a pink flaming standing in a body of water"
+        ]
+      },
+      "bird": {
+        "support": 5,
+        "captions": [
+          "a small blue bird perched on a rock",
+          "a small blue bird perched on a rock",
+          "a small blue bird perched on a rock",
+          "a small blue bird perched on a rock",
+          "a small blue bird perched on a rock"
+        ]
+      }
+    },
+    "vegetable": {
+      "beetroot": {
+        "support": 2,
+        "captions": [
+          "a couple of beets sitting on top of a wooden table",
+          "a couple of beets sitting on top of a wooden table"
+        ]
+      }
+    },
+    "test": {
+      "cat": {
+        "support": 1,
+        "captions": [
+          "a cat sitting on a table"
+        ]
+      }
+    }
+  },
+  "corrections": {}
+}
