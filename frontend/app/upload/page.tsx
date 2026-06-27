@@ -556,9 +556,9 @@ export default function UploadPage() {
                       <ImageIcon className="h-4 w-4 text-black dark:text-white" />
                       Caption
                     </h4>
-                    <p className="text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-900/20 px-4 py-3 rounded-lg text-sm leading-relaxed italic border border-gray-300 dark:border-gray-700">
-                      "{results.caption}"
-                    </p>
+                <p className="text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-900/20 px-4 py-3 rounded-lg text-sm leading-relaxed italic border border-gray-300 dark:border-gray-700">
+                  &ldquo;{results.caption}&rdquo;
+                </p>
                   </div>
 
                   {/* LLM Explanation - Hidden */}

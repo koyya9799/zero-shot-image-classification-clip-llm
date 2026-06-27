@@ -21,6 +21,6 @@ const { handlers, auth, signIn, signOut } = NextAuth({
       }
     }),
   ],
-} as any)
+})
 
 export { handlers, auth, signIn, signOut }
