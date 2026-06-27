@@ -15,7 +15,7 @@ class APIClient {
     })
   }
 
-  /**
+  /*
    * Classify an image with hybrid routing (auto domain detection + MedCLIP for medical)
    */
   async classifyImage(
@@ -125,7 +125,7 @@ class APIClient {
   async evaluateDataset(
     imageFiles: File[],
     labels: string[]
-  ): Promise<any> {
+  ): Promise<Record<string, unknown>>  {
     const formData = new FormData()
     imageFiles.forEach((file) => {
       formData.append('files', file)
@@ -134,7 +134,7 @@ class APIClient {
       formData.append('labels', label)
     })
 
-    const response = await this.client.post<any>(
+    const response = await this.client.post<Record<string, unknown>>(
       '/api/evaluate',
       formData,
       {
