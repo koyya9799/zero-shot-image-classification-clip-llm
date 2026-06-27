@@ -200,8 +200,10 @@ export default function MetricsChart({
                         return (
                           <div className="bg-background border border-border rounded-lg p-3 shadow-lg">
                             <p className="font-medium">{payload[0].payload.name}</p>
-                            <p className="text-primary">Accuracy: {payload[0].value?.toFixed(1)}%</p>
-                            <p className="text-sm text-muted-foreground">Samples: {payload[0].payload.samples}</p>
+                          <p className="text-primary">
+                            Accuracy: {Number(payload[0].value).toFixed(1)}%
+                          </p>
+                                                      <p className="text-sm text-muted-foreground">Samples: {payload[0].payload.samples}</p>
                           </div>
                         )
                       }
