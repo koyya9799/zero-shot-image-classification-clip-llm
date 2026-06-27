@@ -173,7 +173,7 @@ export default function HomePage() {
               <ol className="list-decimal list-inside space-y-3 text-sm text-gray-800 dark:text-gray-200">
                 <li><span className="font-medium">Upload Image</span> - Navigate to Upload & Classify and select your image (JPG, PNG, GIF)</li>
                 <li><span className="font-medium">Optional Classes</span> -  use auto-detection for zero-shot classification</li>
-                <li><span className="font-medium">Start Classification</span> - Click "Start Classification" to begin the adaptive pipeline</li>
+                <li><span className="font-medium">Start Classification</span> - Click &quot;Start Classification&quot; to begin the adaptive pipeline</li>
                 <li><span className="font-medium">Automatic Domain Detection</span> - System analyzes and detects the image domain (medical, natural, etc.)</li>
                 <li><span className="font-medium">Model Routing</span> - Automatically selects MedCLIP for medical or ViT-H/14 for general domains</li>
                 <li><span className="font-medium">Visual Analysis</span> - Generates image caption via BLIP and extracts visual embeddings via CLIP</li>
