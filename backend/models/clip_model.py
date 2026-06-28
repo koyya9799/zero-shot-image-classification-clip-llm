@@ -12,10 +12,12 @@ class ViTH14Model:
         self._cache_data = None
     
     def _ensure_loaded(self):
-        if self._loaded and self._cache_data:
-            return
-        self._cache_data = ModelLoader.load_clip_model_fast("ViT-L-14")
-        self._loaded = True
+    if self._loaded and self._cache_data:
+        return
+
+    # Load the smaller CLIP model to reduce Railway memory usage
+    self._cache_data = ModelLoader.load_clip_model_fast("ViT-B-32")
+    self._loaded = True
             
     @property
     def model(self):

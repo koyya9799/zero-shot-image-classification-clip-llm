@@ -42,7 +42,7 @@ def cached_load(cache_key: str, load_fn, *args, **kwargs):
 
 class ModelLoader:
     @staticmethod
-    def load_clip_model_fast(model_name: str = "ViT-L-14"):
+def load_clip_model_fast(model_name: str = "ViT-B-32"):
         def _load():
             import open_clip
             try:
