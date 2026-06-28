@@ -5,9 +5,6 @@ import logging
 import time
 
 from api.routes import router
-from models.clip_model import get_vith14_model
-from models.medclip_model import get_medclip_model
-from models.blip_model import get_blip_model
 
 logging.basicConfig(
     level=logging.INFO,
@@ -36,23 +33,10 @@ async def startup_event():
     logger.info("=" * 80)
     logger.info("⚡ Dynamic Multi-Domain Image Understanding System")
     logger.info("=" * 80)
+    logger.info("Server started successfully.")
     
     # Preload models
-    start = time.time()
-    try:
-        import concurrent.futures
-        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-            futures = [
-                executor.submit(get_vith14_model()._ensure_loaded),
-                executor.submit(get_medclip_model()._ensure_loaded),
-                executor.submit(get_blip_model()._ensure_loaded)
-            ]
-            for future in concurrent.futures.as_completed(futures):
-                future.result()
-                
-        logger.info(f"✅ Models loaded successfully in {time.time()-start:.2f}s")
-    except Exception as e:
-        logger.error(f"Failed to preload models: {e}")
+
 
 @app.get("/health")
 def health():
