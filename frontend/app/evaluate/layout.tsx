@@ -1,7 +1,6 @@
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/AppSidebar"
 import { TopNav } from "@/components/TopNav"
-import { AuthProvider } from "@/components/AuthProvider"
 
 export default function EvaluateLayout({
   children,
@@ -9,7 +8,6 @@ export default function EvaluateLayout({
   children: React.ReactNode
 }) {
   return (
-    <AuthProvider>
       <SidebarProvider>
         <AppSidebar />
         <main className="flex-1 flex flex-col">
@@ -19,6 +17,5 @@ export default function EvaluateLayout({
           </div>
         </main>
       </SidebarProvider>
-    </AuthProvider>
   )
 }
